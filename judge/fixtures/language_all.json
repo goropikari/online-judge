@@ -931,8 +931,8 @@
     "model": "judge.language",
     "pk": 74,
     "fields": {
-        "key": "JAVA11",
-        "name": "Java 11",
+        "key": "JAVA17",
+        "name": "Java 17",
         "short_name": null,
         "common_name": "Java",
         "ace": "java",
@@ -973,6 +973,38 @@
         "info": "",
         "description": "",
         "extension": "cpp"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 77,
+    "fields": {
+        "key": "LEAN4",
+        "name": "lean",
+        "short_name": "lean",
+        "common_name": "lean",
+        "ace": "lean",
+        "pygments": "lean",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "lean"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 78,
+    "fields": {
+        "key": "BASH",
+        "name": "bash",
+        "short_name": "bash",
+        "common_name": "bash",
+        "ace": "bash",
+        "pygments": "bash",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "sh"
     }
 }
 ]

@@ -1,6 +1,7 @@
 # coding=utf-8
 import re
 
+import os
 from django import forms
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -8,8 +9,13 @@ from django.contrib.auth.password_validation import get_default_password_validat
 from django.forms import ChoiceField, ModelChoiceField
 from django.shortcuts import render
 from django.utils.translation import gettext, gettext_lazy as _
-from registration.backends.default.views import (ActivationView as OldActivationView,
-                                                 RegistrationView as OldRegistrationView)
+# from registration.backends.default.views import (ActivationView as OldActivationView,
+#                                                  RegistrationView as OldRegistrationView)
+from registration.backends.default.views import ActivationView as OldActivationView
+if os.getenv("TWO_STEP_REGISTRATION") == "true":
+    from registration.backends.default.views import RegistrationView as OldRegistrationView
+else:
+    from registration.backends.simple.views import RegistrationView as OldRegistrationView
 from registration.forms import RegistrationForm
 from sortedm2m.forms import SortedMultipleChoiceField
 
